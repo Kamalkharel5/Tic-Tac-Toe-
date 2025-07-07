@@ -1,0 +1,93 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+/* Wraps the entire content under the title and centers it */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+/* Center everything in the middle */
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    font-size: 48px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+/* Hover and player colors */
+.cell:hover {
+    background-color: #e0e0e0;
+}
+.cell.x {
+    color: #3498db;
+}
+.cell.o {
+    color: #e74c3c;
+}
+
+.winner {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Buttons */
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Group buttons together */
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .board {
+        grid-template-columns: repeat(3, 80px);
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 36px;
+    }
+}
+
